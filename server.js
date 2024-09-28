@@ -8,7 +8,8 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname));
+app.use(express.static('public'));
+// app.use(express.static(__dirname));
 
 // Route for form submission
 app.post('/send', (req, res) => {
